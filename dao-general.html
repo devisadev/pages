@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Webpixels">
+    <title>EXCHANGE – USDT for ITTI</title>
+    <link rel="stylesheet" href="assets/libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="preload" href="assets/fonts/iconfont.woff2" as="font" type="font/woff2">
+    <link rel="stylesheet" href="assets/fonts/iconfont.css">
+    <!-- Preloader -->
+    <style>
+        @keyframes hidePreloader {
+            0% {
+                width: 100%;
+                height: 100%;
+            }
+
+            100% {
+                width: 0;
+                height: 0;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body > div.preloader {
+            position: fixed;
+            background: white;
+            width: 100%;
+            height: 100%;
+            z-index: 1071;
+            opacity: 0;
+            transition: opacity .5s ease;
+            overflow: hidden;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body:not(.loaded) > div.preloader {
+            opacity: 1;
+        }
+
+        body:not(.loaded) {
+            overflow: hidden;
+        }
+
+        body.loaded > div.preloader {
+            animation: hidePreloader .5s linear .5s forwards;
+        }
+    </style>
+    <script>
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          document.querySelector('body').classList.add('loaded');
+        }, 300);
+      });
+    </script>
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/brand/favicon.png" type="image/png"><!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/libs/@fortawesome/fontawesome-free/css/all.min.css">
+    <!-- Quick CSS -->
+    <link rel="stylesheet" href="assets/css/quick-website.css" id="stylesheet">
+    <link rel="stylesheet" href="assets/css/common.css">
+</head>
+
+<body>
+<!-- Preloader -->
+<div class="preloader">
+    <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+<div class="modal fade" tabindex="-1" role="dialog" id="modal-cookies" data-backdrop="false"
+     aria-labelledby="modal-cookies" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-aside left-4 right-4 bottom-4">
+        <div class="modal-content bg-dark-dark">
+            <div class="modal-body">
+                <!-- Text -->
+                <p class="text-sm text-white mb-3">
+                    We use cookies so that our themes work for you. By using our website, you agree to our use of
+                    cookies.
+                </p>
+                <!-- Buttons -->
+                <a href="pages/utility/terms.html" class="btn btn-sm btn-white" target="_blank">Learn more</a>
+                <button type="button" class="btn btn-sm btn-primary mr-2" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Go Pro -->
+<!--    <a href="javascript:void(0);" class="btn btn-block btn-dark text-truncate rounded-0 py-2 d-none d-lg-block" style="z-index: 1000;">-->
+<!--        <strong>This is a free demo.</strong> Click here to open the full version →-->
+<!--    </a>-->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container">
+        <!-- Brand -->
+        <a class="navbar-brand" href="index.html">
+            <img style="background-color:#000;" alt="Image placeholder" src="assets/img/exchange/itti_logo.png"
+                 id="navbar-logo">
+            <span class="text-dark">ITTI</span>
+        </a>
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mt-4 mt-lg-0 ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);" onclick="CommonPage.goToPage('home')">Home</a>
+                </li>
+                <li class="nav-item nav-item-active">
+                    <a class="nav-link" href="javascript:void(0);" onclick="CommonPage.goToPage('dao')">Dao General</a>
+                </li>
+            </ul>
+            <!-- Button -->
+            <a class="connect-wallet navbar-btn btn btn-sm btn-primary d-none d-lg-inline-block ml-3"
+               href="javascript:void(0);">
+                Connect Wallet
+            </a>
+            <li style="display: none !important;" class="wallet-account-li d-none d-md-block nav-item dropdown dropdown-animate" data-toggle="hover">
+                <!--<a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>-->
+                <a
+                        class="wallet-account navbar-btn btn btn-sm btn-warning d-none d-lg-inline-block ml-3"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        href="javascript:void(0);">
+                    0x0000...0000
+                </a>
+                <div class="dropdown-menu dropdown-menu-single">
+                    <div class="dropdown-divider"></div>
+                    <a href="javascript:void(0);" onclick="CommonPage.logout()" class="dropdown-item">Logout</a>
+                </div>
+            </li>
+            <!--<a style="display: none !important;"
+               class="wallet-account navbar-btn btn btn-sm btn-warning d-none d-lg-inline-block ml-3"
+               href="javascript:void(0);">
+                0x0000...0000
+            </a>-->
+            <!-- Mobile button -->
+            <div id="mobile-logout" class="d-lg-none only-show-on-mobile-login">
+                <a href="javascript:void(0);" onclick="CommonPage.logout()" class="dropdown-item">Logout</a>
+            </div>
+            <div class="d-lg-none text-center">
+                <a href="javascript:void(0);" class="connect-wallet btn btn-block btn-sm btn-primary">
+                    Connect Wallet
+                </a>
+                <a href="javascript:void(0);"
+                   style="display: none !important;"
+                   class="wallet-account only-show-on-mobile-login btn btn-block btn-sm btn-warning">
+                    0x0000...0000
+                </a>
+                <!--<li style="display: none;" class="wallet-account-li nav-item dropdown dropdown-animate" data-toggle="hover">
+
+                    <div class="dropdown-menu dropdown-menu-single">
+                        <div class="dropdown-divider"></div>
+                        <a href="javascript:void(0);" onclick="CommonPage.logout()" class="dropdown-item">Logout</a>
+                    </div>
+                </li>-->
+            </div>
+            <!--<div class="d-lg-none text-center">
+                <a href="javascript:void(0);" class="connect-wallet btn btn-block btn-sm btn-warning">
+                    Connect Wallet
+                </a>
+                <a style="display: none;" href="javascript:void(0);"
+                   class="wallet-account btn btn-block btn-sm btn-warning">
+                    0x0000...0000
+                </a>
+            </div>-->
+        </div>
+    </div>
+</nav>
+<div class="d-none d-md-block my-banner my-banner-pc">
+    <img src="assets/img/banner/DAObanner.jpg" alt="DAO banner">
+</div>
+<div class="d-md-none my-banner my-banner-mobile">
+    <img src="assets/img/banner/DAObanner_m.jpg" alt="DAO banner">
+</div>
+<!-- Main content -->
+<section class="slice py-7">
+    <div class="container">
+        <div class="row row-grid align-items-center">
+            <!--<div class="col-12 col-md-5 col-lg-6 order-md-2 text-center">
+                &lt;!&ndash; Image &ndash;&gt;
+                <figure class="w-100">
+                    <img alt="Image placeholder" src="assets/img/svg/illustrations/illustration-3.svg"
+                         class="img-fluid mw-md-120">
+                </figure>
+            </div>-->
+            <div class="col-12 order-md-1 pr-md-5">
+                <!-- Heading -->
+                <h1 style="word-break: break-all;" class="mb-3 justify-content-start">
+                    <strong style="font-size: 1.5rem;" class="text-primary">Inviter: </strong>
+                    <span style="font-size: 1rem;" id="inviter-address" class="text-muted">0x--</span>
+                    <!--<span style="font-size: 0.9rem;" id="inviter-type" class="badge bg-primary text-white">&#45;&#45;</span>-->
+                </h1>
+                <h1 style="word-break: break-all;" class="mb-3 justify-content-start">
+                    <strong style="font-size: 1.5rem;" class="text-primary">Yourself: </strong>
+                    <span style="font-size: 1rem;" id="self-address" class="text-muted">0x--</span>
+                    <!--<span style="font-size: 0.9rem;" id="self-type" data-type="&#45;&#45;" class="badge bg-primary text-white">&#45;&#45;</span>-->
+                </h1>
+                <!-- Text -->
+                <!--<p class="lead text-center text-md-left text-muted">
+                    A lightweight, convenient website to exchange ITTI.
+                </p>-->
+                <!-- Buttons -->
+                <p id="dao-active-info" class="lead text-center text-md-left text-muted mt-1">
+                    Become a DAO General
+                </p>
+                <div class="text-center text-md-left mt-1">
+                    <a href="javascript:void(0);" class="btn btn-primary btn-icon buy-eligibility-btn dao-purchase-btn">
+                        <span class="btn-inner--text">Purchase</span>
+                        <span class="btn-inner--icon"><i data-feather="chevron-right"></i></span>
+                    </a>
+                    <!--<a href="javascript:void(0);"
+                       class="btn btn-neutral btn-icon d-none d-lg-inline-block buy-eligibility-btn">DAO General</a>-->
+                </div>
+                <!--<div class="text-center text-md-left mt-5">
+                    <a href="#exchange-itti-section" class="btn btn-primary btn-icon">
+                        <span class="btn-inner&#45;&#45;text">Exchange Itti</span>
+                        <span class="btn-inner&#45;&#45;icon"><i data-feather="chevron-right"></i></span>
+                    </a>
+                    <a href="javascript:void(0);" class="btn btn-neutral btn-icon d-none d-lg-inline-block buy-eligibility-btn not-show-in-white">DAO General</a>
+                    <a href="index.html" style="display: none !important;" class="btn btn-neutral btn-icon d-none d-lg-inline-block only-show-in-white">Go Home</a>
+                </div>
+                &lt;!&ndash; Text &ndash;&gt;
+                <p class="lead text-center text-md-left text-muted mt-5 d-lg-none not-show-in-white">
+                    Have you not joined the whitelist for subscription yet?
+                </p>
+                &lt;!&ndash; Buttons &ndash;&gt;
+                <div class="text-center text-md-left mt-2 d-lg-none">
+                    <a href="javascript:void(0);" class="btn btn-neutral btn-icon buy-eligibility-btn not-show-in-white">DAO General</a>
+                    <a href="index.html" style="display: none !important;" class="btn btn-neutral btn-icon only-show-in-white">Go Home</a>
+                </div>-->
+            </div>
+        </div>
+    </div>
+</section>
+<section style="display: none;" class="slice slice-lg bg-section-dark pt-5 pt-lg-8 invitation-section">
+    <!-- SVG separator -->
+    <div class="shape-container shape-line shape-position-top shape-orientation-inverse">
+        <svg width="2560px" height="100px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+             preserveAspectRatio="none" x="0px" y="0px" viewBox="0 0 2560 100"
+             style="enable-background:new 0 0 2560 100;" xml:space="preserve" class="">
+                <polygon points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+    </div>
+    <!-- Container -->
+    <div class="container position-relative zindex-100">
+        <div class="col">
+            <div class="row justify-content-center">
+                <div class="col-md-10 text-center">
+                    <div class="mt-4 mb-6">
+                        <h2 class="h1 text-white">
+                            Invite DAO General
+                        </h2>
+                        <h4 class="text-white mt-3 justify-content-start">
+                            <span id="user-invitation" style="word-break: break-all;"></span>
+                            <span
+                                    data-clipboard-text="abc"
+                                    style="color: #ccc;"
+                                    class="iconfont icon-copy invite-now-btn"
+                            ></span>
+                        </h4>
+                        <!-- Play button -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="position-relative" id="footer-main">
+    <div class="footer pt-lg-7 footer-dark bg-dark">
+        <!-- SVG shape -->
+        <div class="shape-container shape-line shape-position-top shape-orientation-inverse">
+            <svg width="2560px" height="100px" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px"
+                 viewBox="0 0 2560 100" style="enable-background:new 0 0 2560 100;" xml:space="preserve"
+                 class=" fill-section-secondary">
+                    <polygon points="2560 0 2560 100 0 100"></polygon>
+                </svg>
+        </div>
+        <!-- Footer -->
+        <div class="container pt-4">
+            <div class="row">
+                <div class="col-lg-12 col-sm-10 mb-5 mb-lg-0">
+                    <!-- Theme's logo -->
+                    <a href="index.html">
+                        <img style="width: 40px;" alt="Image placeholder" src="assets/img/exchange/itti_logo.png"
+                             id="footer-logo">
+                        <span class="text-white">ITTI</span>
+                    </a>
+                </div>
+            </div>
+            <hr class="divider divider-fade divider-dark my-4">
+            <div class="row align-items-center justify-content-md-between pb-4">
+                <div class="col-md-6">
+                    <div class="copyright text-sm font-weight-bold text-center text-md-left">
+                        &copy; <span class="my-copyright-year">2022</span>
+                        <a href="https://webpixels.io" class="font-weight-bold" target="_blank">ITTI</a>.
+                        All rights reserved
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Core JS  -->
+<script src="assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/libs/svg-injector/dist/svg-injector.min.js"></script>
+<script src="assets/libs/feather-icons/dist/feather.min.js"></script>
+<script src="assets/libs/web3.min.js"></script>
+<script src="assets/libs/validator.min.js"></script>
+<!-- Quick JS -->
+<!--<script src="assets/js/quick-website.js"></script>-->
+<script src="assets/js/common.js"></script>
+<script src="assets/js/dao-general.js"></script>
+<script src="assets/js/exchange.js"></script>
+<!-- Feather Icons -->
+<script>
+  feather.replace({
+    'width': '1em',
+    'height': '1em'
+  })
+</script>
+</body>
+
+</html>
