@@ -59,13 +59,13 @@ class CommonPage {
     let toUrl = location.origin;
     switch (type) {
       case 'home':
-        toUrl += ('/pages/index.html' + location.search);
+        toUrl += ('/index.html' + location.search);
         break
       case 'dao':
-        toUrl += ('/pages/dao-general.html' + location.search);
+        toUrl += ('/dao-general.html' + location.search);
         break
       default:
-        toUrl += ('/pages/index.html' + location.search);
+        toUrl += ('/index.html' + location.search);
         break
     }
     window.location.href = toUrl;
