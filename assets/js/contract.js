@@ -13,9 +13,11 @@ class BaseContract {
     if (typeof window.ethereum === 'undefined') {
       return Promise.reject(new Error('You have not installed the wallet'));
     }
-    const isUnlocked = await ethereum._metamask.isUnlocked();
-    if (!isUnlocked) {
-      return Promise.reject(new Error('MetaMask has been locked'));
+    if (ethereum._metamask) {
+      const isUnlocked = await ethereum._metamask.isUnlocked();
+      if (!isUnlocked) {
+        return Promise.reject(new Error('Wallet has been locked'));
+      }
     }
     // switch if not the right chain
     const {chainId} = config;
