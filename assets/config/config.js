@@ -4,13 +4,13 @@ function getConfig() {
     chainName: 'Goerli Test Network',
     browserBaseUrl: 'https://goerli.etherscan.io/tx/',
     ittiContract: {
-      address: '0xAc2599b342E72E38ed2A0Fa2732df1Ce81fC17E1',
+      address: '0xf7d461F2C8bC832899d99A87BE9F137dfA78E777',
       abi: getIttiAbi(),
       homeInviteBaseUrl: `${location.origin}/index.html?inviter=`,
       daoInviteBaseUrl: `${location.origin}/dao-general.html?inviter=`,
     },
     usdtContract: {
-      address: '0x320e08c12e0A16A7118164750731537b99C92E9b',
+      address: '0x642A4d108266433471c41cf3b5006BE806eF9410',
       abi: getUsdtAbi(),
     },
   }
