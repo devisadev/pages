@@ -15,10 +15,6 @@
 .navbar-nav li.nav-item-active {
   border-bottom: 1px solid #50b5ff;
 }
-.partner-divider {
-  width: 100%;
-  box-shadow: 0 0 5px 10px #07183c;
-}
 .partner-row img {
   width: 100%;
   object-fit: contain;
