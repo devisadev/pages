@@ -43,7 +43,7 @@ class DaoGeneralPage {
         })
         .catch(err => {
           if (err.code != 4001) {
-            new CommonPage().showError(err.message);
+            new CommonPage().showError(err.message || err.msg);
             console.error('连接钱包失败:', err);
           }
         });
@@ -74,7 +74,7 @@ class DaoGeneralPage {
         `
         new CommonPage().showError(errMsg || 'Subscription failed');
       } else {
-        new CommonPage().showError(err.message || 'Subscription failed');
+        new CommonPage().showError(err.message || err.msg || 'Subscription failed');
       }
       console.error('getQualification err:', err)
     } finally {

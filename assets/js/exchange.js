@@ -26,7 +26,7 @@ class ExchangePage {
         })
         .catch(err => {
           if (err.code != 4001) {
-            new CommonPage().showError(err.message);
+            new CommonPage().showError(err.message || err.msg);
             console.error('连接钱包失败:', err);
           }
         });
@@ -81,7 +81,7 @@ class ExchangePage {
       await this.itti.exchangeByUsdt(usdtAmount);
     } catch (err) {
       if (err && err.code != 4001) {
-        new CommonPage().showError(err.message || 'Subscription failed')
+        new CommonPage().showError(err.message || err.msg || 'Subscription failed')
         console.error('getQualification err:', err)
       }
     } finally {
