@@ -4,7 +4,7 @@ function getConfig() {
     chainName: 'Goerli Test Network',
     browserBaseUrl: 'https://goerli.etherscan.io/tx/',
     ittiContract: {
-      address: '0xf7d461F2C8bC832899d99A87BE9F137dfA78E777',
+      address: '0x5f233DE7492F689C2799CEc56485F409Fc5abAEE',
       abi: getIttiAbi(),
       homeInviteBaseUrl: `${location.origin}/index.html?inviter=`,
       daoInviteBaseUrl: `${location.origin}/dao-general.html?inviter=`,
