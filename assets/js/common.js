@@ -105,15 +105,15 @@ class CommonPage {
       <!-- Modal -->
       <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="myModalLabel">Success!</h5>
+          <div class="modal-content bg-dark">
+            <div class="modal-header" style="border-bottom-color: #13223a">
+              <h5 class="modal-title text-white" id="myModalLabel">Success!</h5>
             </div>
-            <div class="modal-body" style="word-wrap: break-word;word-break: break-all;">
-              ...
+            <div class="modal-body text-white" style="word-wrap: break-word;word-break: break-all;">
+              Unknown error
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary close-my-modal" data-bs-dismiss="modal">Close</button>
+            <div class="modal-footer" style="border-top-color: #13223a">
+              <button type="button" class="btn btn-info close-my-modal" data-bs-dismiss="modal">Close</button>
 <!--              <button type="button" class="btn btn-primary">Save changes</button>-->
             </div>
           </div>

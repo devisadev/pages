@@ -33,7 +33,7 @@ class DaoGeneralPage {
           const selfAddr = ethereum.selectedAddress;
           if (selfAddr) {
             _this.itti.nodeMappings(selfAddr).then(selfInfo => {
-              console.log('dao selfInfo:', selfInfo);
+              // console.log('dao selfInfo:', selfInfo);
               if (selfInfo._type === 'sale') {
                 $('.invitation-section').show();
                 new CommonPage().setInvitationLink('dao');

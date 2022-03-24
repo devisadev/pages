@@ -99,27 +99,27 @@
 <!--        <strong>This is a free demo.</strong> Click here to open the full version →-->
 <!--    </a>-->
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
     <div class="container">
         <!-- Brand -->
         <a class="navbar-brand" href="index.html">
-            <img style="background-color:#000;" alt="Image placeholder" src="assets/img/exchange/itti_logo.png"
+            <img alt="Image placeholder" src="assets/img/exchange/itti_logo.png"
                  id="navbar-logo">
-            <span class="text-dark">ITTI</span>
+            <span class="text-white">ITTI</span>
         </a>
         <!-- Toggler -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Collapse -->
-        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="collapse navbar-collapse bg-dark" id="navbarCollapse">
             <ul class="navbar-nav mt-4 mt-lg-0 ml-auto">
                 <li class="nav-item nav-item-active">
-                    <a class="nav-link" href="javascript:void(0);" onclick="CommonPage.goToPage('home')">Home</a>
+                    <a class="nav-link text-info" href="javascript:void(0);" onclick="CommonPage.goToPage('home')">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);" onclick="CommonPage.goToPage('dao')">Dao General</a>
+                    <a class="nav-link text-info" href="javascript:void(0);" onclick="CommonPage.goToPage('dao')">Dao General</a>
                 </li>
             </ul>
             <!-- Button -->
@@ -130,7 +130,7 @@
             <li style="display: none !important;" class="wallet-account-li d-none d-md-block nav-item dropdown dropdown-animate" data-toggle="hover">
                 <!--<a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>-->
                 <a
-                   class="wallet-account navbar-btn btn btn-sm btn-warning d-none d-lg-inline-block ml-3"
+                   class="wallet-account navbar-btn btn btn-sm btn-primary d-none d-lg-inline-block ml-3"
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                    href="javascript:void(0);">
                     0x0000...0000
@@ -142,7 +142,7 @@
             </li>
             <!-- Mobile button -->
             <div id="mobile-logout" class="d-lg-none only-show-on-mobile-login">
-                <a href="javascript:void(0);" onclick="CommonPage.logout()" class="dropdown-item">Logout</a>
+                <a href="javascript:void(0);" onclick="CommonPage.logout()" class="dropdown-item text-white">Logout</a>
             </div>
             <div class="d-lg-none text-center">
                 <a href="javascript:void(0);" class="connect-wallet btn btn-block btn-sm btn-primary">
@@ -150,7 +150,7 @@
                 </a>
                 <a href="javascript:void(0);"
                    style="display: none !important;"
-                   class="wallet-account only-show-on-mobile-login btn btn-block btn-sm btn-warning">
+                   class="wallet-account only-show-on-mobile-login btn btn-block btn-sm btn-primary">
                     0x0000...0000
                 </a>
                 <!--<li style="display: none;" class="wallet-account-li nav-item dropdown dropdown-animate" data-toggle="hover">
@@ -171,7 +171,7 @@
     <img src="assets/img/banner/ITTIbanner_m.jpg" alt="ITTI banner">
 </div>
 <!-- Main content -->
-<section class="slice py-7">
+<section class="slice py-7 bg-dark">
     <div class="container">
         <div class="row row-grid align-items-center">
             <!--<div class="col-12 col-md-5 col-lg-6 order-md-2 text-center">
@@ -185,12 +185,12 @@
                 <!-- Heading -->
                 <h1 style="word-break: break-all;" class="mb-3 justify-content-start">
                     <strong style="font-size: 1.5rem;" class="text-primary">Inviter: </strong>
-                    <span style="font-size: 1rem;" id="inviter-address" class="text-muted">0x--</span>
+                    <span style="font-size: 1rem;" id="inviter-address" class="text-white">0x--</span>
                     <!--<span style="font-size: 0.9rem;" id="inviter-type" class="badge bg-primary text-white">&#45;&#45;</span>-->
                 </h1>
                 <h1 style="word-break: break-all;" class="mb-3 justify-content-start">
                     <strong style="font-size: 1.5rem;" class="text-primary">Yourself: </strong>
-                    <span style="font-size: 1rem;" id="self-address" class="text-muted">0x--</span>
+                    <span style="font-size: 1rem;" id="self-address" class="text-white">0x--</span>
                     <!--<span style="font-size: 0.9rem;" id="self-type" data-type="&#45;&#45;" class="badge bg-primary text-white">&#45;&#45;</span>-->
                 </h1>
                 <!-- Text -->
@@ -198,7 +198,7 @@
                     0x8C19dE862D9473724A763e4DAC0a5bAB55E53722
                 </p>-->
                 <!-- Buttons -->
-                <p id="active-info" class="lead text-center text-md-left text-muted mt-1">
+                <p id="active-info" class="lead text-center text-md-left text-white mt-1">
                     You need to activate your account before you can exchange or invite friends.
                 </p>
                 <div class="text-center text-md-left mt-1">
@@ -221,7 +221,7 @@
         </div>
     </div>
 </section>
-<section id="exchange-itti-section" class="slice pt-lg-6 pb-0 pb-lg-6 bg-section-secondary">
+<section id="exchange-itti-section" class="slice pt-lg-6 pb-0 pb-lg-6 bg-dark">
     <div class="container">
         <!-- Title -->
         <!-- Section title -->
@@ -230,7 +230,7 @@
                 <!--                    <span class="badge badge-soft-success badge-pill badge-lg">-->
                 <!--                        Get started-->
                 <!--                    </span>-->
-                <h2 class=" mt-4">Exchange USDT for ITTI</h2>
+                <h2 class="text-white mt-4">Exchange USDT for ITTI</h2>
                 <!--                <div class="mt-2">-->
                 <!--                    <p class="lead lh-180">Use Atomic Design to build components, sections and, then, pages.</p>-->
                 <!--                </div>-->
@@ -338,13 +338,26 @@
         <!-- Footer -->
         <div class="container pt-4">
             <div class="row">
-                <div class="col-lg-12 col-sm-10 mb-5 mb-lg-0">
+                <div class="col-lg-12 col-sm-10 mb-5 mb-lg-0 d-flex justify-content-between">
                     <!-- Theme's logo -->
                     <a href="index.html">
                         <img style="width: 40px;" alt="Image placeholder" src="assets/img/exchange/itti_logo.png"
                              id="footer-logo">
                         <span class="text-white">ITTI</span>
                     </a>
+                    <!-- Social -->
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://youtu.be/ClSvBHmyP2E" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pl-0" href="https://twitter.com/ITERATION2019" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <hr class="divider divider-fade divider-dark my-4">
@@ -367,11 +380,11 @@
 <script src="assets/libs/feather-icons/dist/feather.min.js"></script>
 <script src="assets/libs/web3.min.js"></script>
 <script src="assets/libs/validator.min.js"></script>
-<script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
+<!--<script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
 <script>
   // VConsole will be exported to `window.VConsole` by default.
   var vConsole = new window.VConsole();
-</script>
+</script>-->
 <!-- Quick JS -->
 <!--<script src="assets/js/quick-website.js"></script>-->
 <script src="assets/js/common.js"></script>

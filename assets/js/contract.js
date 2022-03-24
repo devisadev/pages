@@ -157,7 +157,7 @@ class IttiContract extends BaseContract {
    */
   async activateAddress(inviter) {
     if (!validator.isEthereumAddress(inviter + '')) {
-      return Promise.reject(new Error(`'The inviter's account format is incorrect'`));
+      return Promise.reject(new Error(`The inviter's account format is incorrect`));
     }
     if (!ethereum || !ethereum.selectedAddress) {
       return Promise.reject(new Error('Wallet not yet connected'));
