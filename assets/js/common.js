@@ -92,7 +92,7 @@ class CommonPage {
   }
 
   static logout() {
-    console.log('退出登录')
+    // console.log('logout')
     const actNot = $('.connect-wallet');
     const actOkLi = $('.wallet-account-li');
     actOkLi.attr('style', 'display: none !important;');
