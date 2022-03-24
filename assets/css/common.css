@@ -15,3 +15,6 @@
 .navbar-nav li.nav-item-active {
   border-bottom: 1px solid #50b5ff;
 }
+.footer a.nav-link .fab {
+  font-size: 1.25rem;
+}
