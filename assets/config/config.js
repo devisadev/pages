@@ -7,7 +7,7 @@ function getConfig() {
     chainName: 'BNB Smart Chain Mainnet',
     browserBaseUrl: 'https://bscscan.com/tx/',
     ittiContract: {
-      address: '0xfa6b63Ae2372889B70E33B20FFBE79E5E9d0D588',
+      address: '0x4fC7e2D36C84D90aa70230512a7Bb38bc99E1964',
       abi: getIttiAbi(),
       homeInviteBaseUrl: `${location.origin}/index.html?inviter=`,
       daoInviteBaseUrl: `${location.origin}/dao-general.html?inviter=`,
