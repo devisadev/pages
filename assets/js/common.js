@@ -55,7 +55,7 @@ class CommonPage {
     }
   }
 
-  static goToPage(type) {
+  static goToPage(type, newPage = false) {
     let toUrl = location.origin;
     switch (type) {
       case 'home':
@@ -64,11 +64,18 @@ class CommonPage {
       case 'dao':
         toUrl += ('/dao-general.html' + location.search);
         break
+      case 'whitePaper':
+        toUrl += '/white-paper-iteration.pdf';
+        break
       default:
         toUrl += ('/index.html' + location.search);
         break
     }
-    window.location.href = toUrl;
+    if (newPage) {
+      window.open(toUrl);
+    } else {
+      window.location.href = toUrl;
+    }
   }
 
   setInvitationLink(type) {

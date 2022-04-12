@@ -121,6 +121,9 @@
                 <li class="nav-item">
                     <a class="nav-link text-info" href="javascript:void(0);" onclick="CommonPage.goToPage('dao')">Dao General</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link text-info" href="javascript:void(0);" onclick="CommonPage.goToPage('whitePaper', true)">White Paper</a>
+                </li>
             </ul>
             <!-- Button -->
             <a class="connect-wallet navbar-btn btn btn-sm btn-primary d-none d-lg-inline-block ml-3"
@@ -168,8 +171,9 @@
     <img src="assets/img/banner/ITTIbanner.jpg" alt="ITTI banner">
 </div>
 <div class="d-md-none my-banner my-banner-mobile">
-    <img src="assets/img/banner/ITTIbanner_m.jpg" alt="ITTI banner">
+    <img src="assets/img/banner/ITTIbanner.jpg" alt="ITTI banner">
 </div>
+
 <!-- Main content -->
 <section class="slice py-7 bg-dark">
     <div class="container">
@@ -221,6 +225,33 @@
         </div>
     </div>
 </section>
+<section style="display: none;" class="slice slice-lg bg-dark pt-5 pt-lg-8 invitation-section">
+    <!-- Container -->
+    <div class="container position-relative zindex-100">
+        <div class="col">
+            <div class="row justify-content-center">
+                <div class="col-md-10 text-center">
+                    <div class="mt-4 mb-6">
+                        <h2 class="h1 text-white">
+                            Invite Your Friend
+                        </h2>
+                        <h4 class="text-white mt-3 justify-content-start">
+                            <span id="user-invitation" style="word-break: break-all;"></span>
+                            <span
+                                    data-clipboard-text="abc"
+                                    style="color: #ccc;"
+                                    class="iconfont icon-copy invite-now-btn pointer"
+                            ></span>
+                        </h4>
+                        <!-- Play button -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="exchange-itti-section" class="slice pt-lg-6 pb-0 pb-lg-6 bg-dark">
     <div class="container">
         <!-- Title -->
@@ -290,32 +321,29 @@
         </div>
     </div>
 </section>
-<section style="display: none;" class="slice slice-lg bg-dark pt-5 pt-lg-8 invitation-section">
-    <!-- Container -->
-    <div class="container position-relative zindex-100">
-        <div class="col">
-            <div class="row justify-content-center">
-                <div class="col-md-10 text-center">
-                    <div class="mt-4 mb-6">
-                        <h2 class="h1 text-white">
-                            Invite Your Friend
-                        </h2>
-                        <h4 class="text-white mt-3 justify-content-start">
-                            <span id="user-invitation" style="word-break: break-all;"></span>
-                            <span
-                                    data-clipboard-text="abc"
-                                    style="color: #ccc;"
-                                    class="iconfont icon-copy invite-now-btn"
-                            ></span>
-                        </h4>
-                        <!-- Play button -->
 
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- Articles -->
+<section class="row partner-row">
+    <div class="col-lg-12 col-sm-12 mb-lg-0 d-flex justify-content-between">
+        <img src="assets/img/articles/itti-article1.jpg" class="d-none d-md-block" alt="partners">
+        <img src="assets/img/articles/itti-article1.jpg" class="d-block d-md-none" alt="partners">
+    </div>
+    <div class="col-lg-12 col-sm-12 mb-lg-0 d-flex justify-content-between">
+        <img src="assets/img/articles/itti-article2.jpg" class="d-none d-md-block" alt="partners">
+        <img src="assets/img/articles/itti-article2.jpg" class="d-block d-md-none" alt="partners">
+    </div>
+    <div class="col-lg-12 col-sm-12 mb-lg-0 d-flex justify-content-between">
+        <img src="assets/img/articles/itti-article3.jpg" class="d-none d-md-block" alt="partners">
+        <img src="assets/img/articles/itti-article3.jpg" class="d-block d-md-none" alt="partners">
     </div>
 </section>
+
+<div class="d-none d-md-block my-banner my-banner-pc">
+    <img src="assets/img/banner/ITTIbanner2.jpg" alt="ITTI banner">
+</div>
+<div class="d-md-none my-banner my-banner-mobile">
+    <img src="assets/img/banner/ITTIbanner2.jpg" alt="ITTI banner">
+</div>
 
 <!-- Partner -->
 <section class="row partner-row">
